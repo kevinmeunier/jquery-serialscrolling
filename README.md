@@ -48,8 +48,8 @@ The following configurations is available by default:
 Name               | Type       | Default                             | Description
 ------------------ | ---------- | ----------------------------------- | -----------
 targetSelector     | *string*   | *'[data-serialscrolling-target]'*   | The selector to identify the targets (usually sections)
-getTarget          | *function* | See [jquery.serialscrolling.js](https://github.com/kevinmeunier/jquery-serialexpand/blob/main/dist/jquery.serialscrolling.js) | The function to retrieve the target element (usually sections)
-getTrigger         | *function* | See [jquery.serialscrolling.js](https://github.com/kevinmeunier/jquery-serialexpand/blob/main/dist/jquery.serialscrolling.js) | The function to retrieve the trigger element
+getTarget          | *function* | See [jquery.serialscrolling.js](https://github.com/kevinmeunier/jquery-serialscrolling/blob/main/dist/jquery.serialscrolling.js) | The function to retrieve the target element (usually sections)
+getTrigger         | *function* | See [jquery.serialscrolling.js](https://github.com/kevinmeunier/jquery-serialscrolling/blob/main/dist/jquery.serialscrolling.js) | The function to retrieve the trigger element
 duration           | *integer*  | *800*                               | The delay for the scroll animation
 easing             | *string*   | *'easeInOutExpo'*                   | The effect for the scroll animation
 offsetTop          | *integer*  | *0*                                 | The offset top when scrolling to a specific section 
