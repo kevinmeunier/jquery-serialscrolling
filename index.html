@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://github.meunierkevin.com/assets/img/favicon.svg" rel="icon" type="image/svg+xml">
+<link href="https://github.meunierkevin.com/assets/css/site-all.css" rel="stylesheet">
+<script src="https://github.meunierkevin.com/assets/js/jquery.min.js"></script>
+<script src="https://github.meunierkevin.com/assets/js/site-all.js"></script>
+<title>jQuery serialscrolling — Meunier Kévin</title>
+</head>
+<body>
+
+<script>writeHeader('serialscrolling');</script>
+
+<div id="section-demonstration-html">
+  <script src="/assets/js/jquery.serialscrolling.js"></script>
+
+  <ul id="nav-serialscrolling">
+    <li><span class="sub-link" data-serialscrolling="home">Home</span></li>
+    <li><span class="sub-link" data-serialscrolling="work">Work</span></li>
+    <li><span class="sub-link" data-serialscrolling="team">Team</span></li>
+  </ul>
+
+  <div data-serialscrolling-target="home">Section 1</div>
+  <div data-serialscrolling-target="work">Section 2</div>
+  <div data-serialscrolling-target="team">Section 3</div>
+</div>
+<div id="section-demonstration-js">
+  <script src="dist/jquery.serialscrolling.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    // jquery.serialscrolling initialisation
+    $('[data-serialscrolling]').serialscrolling();
+  });
+  </script>
+</div>
+<div id="section-demonstration-css">
+  <style type="text/css">
+  /* Demo styles */
+  #nav-serialscrolling{position:sticky;top:50%;left:50px;width:250px;margin-left:-250px;float:left;}
+  #nav-serialscrolling .sub-link{position:relative;display:block;padding:10px;font-size:13px;cursor:pointer;opacity:0.5;transition:300ms;}
+  #nav-serialscrolling .sub-link:hover, #nav-serialscrolling .sub-link.is-current{opacity:1;}
+  #nav-serialscrolling .sub-link:before, #nav-serialscrolling .sub-link:after{content:'';position:absolute;top:50%;transform:translateY(-50%);border-radius:100%;transition:300ms;}
+  #nav-serialscrolling .sub-link:before{left:-30px;width:16px;height:16px;border:1px solid rgba(255, 255, 255, .2);}
+  #nav-serialscrolling .sub-link:after{left:-23px;width:5px;height:5px;background-color:#b41c28;opacity:0;}
+  #nav-serialscrolling .sub-link.is-current:before{border-color:rgba(255, 255, 255, .4);}
+  #nav-serialscrolling .sub-link.is-current:after{opacity:1;background-color:}
+  [data-serialscrolling-target]{display:flex;justify-content:center;align-items:center;min-height:100vh;padding:50px;margin-top:100px;background-color:rgba(255, 255, 255, .05);color:rgba(255, 255, 255, .25);font-size:13px;font-style:italic;text-align:center;}
+  </style>
+</div>
+
+<script>writeFooter('serialscrolling');</script>
+
+</body>
+</html>
