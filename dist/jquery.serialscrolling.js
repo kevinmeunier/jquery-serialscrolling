@@ -21,10 +21,10 @@
     $.extend(this, {
       init: function(){
         // Add selected class on scroll
-        $window.on('scroll.serialscrolling', this.handleCurrent).trigger('scroll');
+        $window.off('scroll.serialscrolling').on('scroll.serialscrolling', this.handleCurrent).trigger('scroll');
 
         // Handle & bind the event on links
-        this.on('click.serialscrolling', this.handleEvent);
+        this.off('click.serialscrolling').on('click.serialscrolling', this.handleEvent);
       },
 
       handleCurrent: function(){
